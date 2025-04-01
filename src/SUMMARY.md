@@ -6,7 +6,10 @@
 
 # 基础知识
 
-- [第一章](./chapter_1.md)
+- [Rust 简介](./chapter_1.md)
+- [基础语法](./chapter_2.md)
+
+---
 
 # 附录
 

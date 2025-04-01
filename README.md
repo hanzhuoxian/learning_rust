@@ -1,3 +1,5 @@
+# Learning Rust
+
 ```plaintext
   _                           _               _____           _   
  | |                         (_)             |  __ \         | |  

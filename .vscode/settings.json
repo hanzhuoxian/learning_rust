@@ -1,0 +1,8 @@
+{
+    "rust-analyzer.workspace.discoverConfig": {
+        "auto": false,
+        "exclude": [
+            "code"
+        ]
+    }
+}
