@@ -1,6 +1,6 @@
 # Summary
 
-[引言](./foreword.md)
+[前言](./foreword.md)
 
 ---
 
