@@ -4,10 +4,11 @@
 
 ---
 
-# 基础知识
+# Rust 基础知识
 
-- [Rust 简介](./chapter_1.md)
-- [基础语法](./chapter_2.md)
+- [你好 Rust](./ch_hello.md)
+- [基础语法](./ch_common.md)
+  - [变量](./ch_var.md)
 
 ---
 
