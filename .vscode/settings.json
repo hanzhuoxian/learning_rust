@@ -3,6 +3,7 @@
         "auto": false,
         "exclude": [
             "code"
-        ]
+        ],
+        "command": []
     }
 }

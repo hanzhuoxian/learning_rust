@@ -3,5 +3,77 @@
 version = 4
 
 [[package]]
+name = "array"
+version = "0.1.0"
+
+[[package]]
+name = "ch_struct"
+version = "0.1.0"
+
+[[package]]
+name = "control_if"
+version = "0.1.0"
+
+[[package]]
+name = "data_type"
+version = "0.1.0"
+
+[[package]]
+name = "functions"
+version = "0.1.0"
+
+[[package]]
 name = "hello_world"
+version = "0.1.0"
+
+[[package]]
+name = "loop_for"
+version = "0.1.0"
+
+[[package]]
+name = "loop_label"
+version = "0.1.0"
+
+[[package]]
+name = "loop_while"
+version = "0.1.0"
+
+[[package]]
+name = "loops"
+version = "0.1.0"
+
+[[package]]
+name = "ownership_func"
+version = "0.1.0"
+
+[[package]]
+name = "ownership_ref"
+version = "0.1.0"
+
+[[package]]
+name = "ownership_return"
+version = "0.1.0"
+
+[[package]]
+name = "ownership_slice"
+version = "0.1.0"
+
+[[package]]
+name = "ownership_string"
+version = "0.1.0"
+
+[[package]]
+name = "ownership_var"
+version = "0.1.0"
+
+[[package]]
+name = "shadowing"
+version = "0.1.0"
+
+[[package]]
+name = "tuple"
+version = "0.1.0"
+
+[[package]]
+name = "var"
 version = "0.1.0"
