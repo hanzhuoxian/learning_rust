@@ -71,6 +71,14 @@ name = "shadowing"
 version = "0.1.0"
 
 [[package]]
+name = "struct_tuple"
+version = "0.1.0"
+
+[[package]]
+name = "struct_update"
+version = "0.1.0"
+
+[[package]]
 name = "tuple"
 version = "0.1.0"
 

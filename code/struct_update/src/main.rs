@@ -8,25 +8,14 @@ struct User {
 }
 
 fn main() {
-    let email = String::from("lili@zhouyi.xin");
-    // 结构体实例创建
-    let mut user1 = User {
-        active: true,
-        username: String::from("Li Li"),
-        email,
-        sign_in_count: 1,
+    let email = String::from("li.li@zhouyi@xin");
+    let username = String::from("li.li");
+    let user1 = build_user(email, username);
+    let user2 = User {
+        username: String::from("lili"),
+        ..user1 // 必须放在最后
     };
-
-    // 结构体字段修改
-    user1.email = String::from("li.li@zhouyi.xin");
-
-    // 结构体访问
-    println!("user1.active: {}", user1.active);
-    println!("user1.username : {}", user1.username);
-    println!("user1.email : {}", user1.email);
-    println!("user1.sign_in_count : {}", user1.sign_in_count);
-
-    let user2 = build_user(user1.email.clone(), user1.username.clone());
+    
     println!("user2.active: {}", user2.active);
     println!("user2.username : {}", user2.username);
     println!("user2.email : {}", user2.email);
