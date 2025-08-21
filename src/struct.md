@@ -93,3 +93,26 @@ fn build_user(email: String, username: String) -> User {
 ## 没有命名字段的元组结构体
 
 元组结构体有着结构体名称提供的含义，但没有具体的字段名称。当你想给整个元组取一个名字，并使元组成为与其他元组不同的类型时。
+
+## 类单元结构体
+
+没有任何字段的结构体，类似于 `()`，使用场景想在某个类型上实现 `trait`, 但不需要在类型中存储数据。
+
+```rust
+#[derive(Debug)]
+struct SayHello;
+trait Hello {
+    fn hello();
+}
+impl Hello for SayHello{
+    fn hello() {
+        println!("hello");
+    }
+}
+fn main() {
+    let subject = SayHello;
+    println!("{:?}", subject);
+    SayHello::hello();
+}
+
+```

@@ -123,3 +123,148 @@ fn main() {
 }
 
 ```
+
+### `match` 控制流
+
+`match` 允许我们将一个值与一系列的模式相比较，并根据相匹配的模式执行相应的代码。模式可由字面量、变量、通配符和许多其他内容构成。它的力量来源于模式的表现力及编译器的检查，它确保了所有可能的情况都得到了处理。
+
+`match` 执行时会将表达式的值按顺序与每一个分支的模式进行比较，如果模式匹配了这个值，那么相关联的代码将会被执行。如果不匹配就继续检查下一个分支。每一个分支关联的是一个表达式，而表达是的结果值将作为 `match` 表达式的返回值。如果分支代码多的话需要使用大括号，并且逗号可以省略不写。
+
+```rust
+
+match 表达式 {
+    模式1 => 代码,
+    模式2 => 代码,
+}
+
+```
+
+枚举举例
+
+```rust
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter,
+}
+
+fn value_in_coin(coin: Coin) -> u8 {
+    match coin {
+        Coin::Penny => {
+            println!("Lucky penny!");
+            1
+        }
+        Coin::Nickel => 5,
+        Coin::Dime => 10,
+        Coin::Quarter => 25,
+    }
+}
+fn main() {
+    let penny = Coin::Penny;
+    let nickel = Coin::Nickel;
+    let dime = Coin::Dime;
+    let quarter = Coin::Quarter;
+    println!("penny: {}", value_in_coin(penny));
+    println!("nickel: {}", value_in_coin(nickel));
+    println!("dime: {}", value_in_coin(dime));
+    println!("quarter: {}", value_in_coin(quarter));
+    
+}
+```
+
+#### 绑定值模式
+
+匹配分支的另一个有用的功能是绑定匹配的模式的部分值。这也就是如何从枚举成员中提取值的。
+
+```rust
+
+#[derive(Debug)]
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter(UsState),
+}
+
+#[derive(Debug)]
+enum UsState {
+    Alabama,
+    Alaska,
+}
+
+fn value_in_coin(coin: Coin) -> u8 {
+    match coin {
+        Coin::Penny => {
+            println!("Lucky penny!");
+            1
+        }
+        Coin::Nickel => 5,
+        Coin::Dime => 10,
+        Coin::Quarter(state) => {
+            println!("{:?}", state);
+            25
+        }
+    }
+}
+
+fn main() {
+    let penny = Coin::Penny;
+    let nickel = Coin::Nickel;
+    let dime = Coin::Dime;
+    let alabama_quarter = Coin::Quarter(UsState::Alabama);
+    let alaska_quarter = Coin::Quarter(UsState::Alaska);
+    println!("penny: {}", value_in_coin(penny));
+    println!("nickel: {}", value_in_coin(nickel));
+    println!("dime: {}", value_in_coin(dime));
+    println!("alabama_quarter: {}", value_in_coin(alabama_quarter));
+    println!("alaska_quarter: {}", value_in_coin(alaska_quarter));
+}
+```
+
+#### 匹配 `Option<T>`
+
+```rust
+fn plus_one(x: Option<i32>) -> Option<i32> {
+    match x {
+        None => None,
+        Some(i) => Some(i+1)
+    }
+}
+
+fn main() {
+    let five = Some(5);
+    let six = plus_one(five);
+    let none = plus_one(None);
+
+    println!("{}", six.unwrap());
+    if none == None {
+        println!("None");
+    }
+
+}
+```
+
+#### 通配符
+
+```rust
+fn main() {
+    let dice_roll = 9;
+    let dice = match dice_roll {
+        1..=8 => 8, // 匹配一个范围
+        9 => 9, // 匹配单独的值
+        other => other, // 匹配所有未匹配的值
+        // _ => 0, // 匹配所有未匹配的值但是不需要使用该值
+    };
+    println!("{}", dice);
+}
+```
+
+### `if let`
+
+```rust
+let x = Some(3u8)
+if let Some(s) = x {
+    println!("{}", x);
+}
+```

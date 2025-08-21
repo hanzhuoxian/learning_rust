@@ -7,7 +7,27 @@ name = "array"
 version = "0.1.0"
 
 [[package]]
+name = "associated_fn"
+version = "0.1.0"
+
+[[package]]
+name = "backyard"
+version = "0.1.0"
+
+[[package]]
 name = "ch_struct"
+version = "0.1.0"
+
+[[package]]
+name = "collection_map"
+version = "0.1.0"
+
+[[package]]
+name = "collection_string"
+version = "0.1.0"
+
+[[package]]
+name = "collection_vector"
 version = "0.1.0"
 
 [[package]]
@@ -19,11 +39,91 @@ name = "data_type"
 version = "0.1.0"
 
 [[package]]
+name = "enum_concept"
+version = "0.1.0"
+
+[[package]]
+name = "error_panic"
+version = "0.1.0"
+
+[[package]]
+name = "error_prop"
+version = "0.1.0"
+
+[[package]]
+name = "error_prop_simple"
+version = "0.1.0"
+
+[[package]]
+name = "error_result"
+version = "0.1.0"
+
+[[package]]
+name = "functional_give_shirt"
+version = "0.1.0"
+
+[[package]]
+name = "functional_only_borrow"
+version = "0.1.0"
+
+[[package]]
+name = "functional_sort"
+version = "0.1.0"
+
+[[package]]
 name = "functions"
 version = "0.1.0"
 
 [[package]]
+name = "generics_largest"
+version = "0.1.0"
+
+[[package]]
+name = "generics_method"
+version = "0.1.0"
+
+[[package]]
+name = "generics_mixup"
+version = "0.1.0"
+
+[[package]]
+name = "generics_struct"
+version = "0.1.0"
+
+[[package]]
 name = "hello_world"
+version = "0.1.0"
+
+[[package]]
+name = "if_let"
+version = "0.1.0"
+
+[[package]]
+name = "iter_for"
+version = "0.1.0"
+
+[[package]]
+name = "iter_shoe"
+version = "0.1.0"
+
+[[package]]
+name = "lifetime_dangling"
+version = "0.1.0"
+
+[[package]]
+name = "lifetime_fn_new"
+version = "0.1.0"
+
+[[package]]
+name = "lifetime_longest"
+version = "0.1.0"
+
+[[package]]
+name = "lifetime_struct"
+version = "0.1.0"
+
+[[package]]
+name = "longest_all"
 version = "0.1.0"
 
 [[package]]
@@ -40,6 +140,26 @@ version = "0.1.0"
 
 [[package]]
 name = "loops"
+version = "0.1.0"
+
+[[package]]
+name = "match_coin"
+version = "0.1.0"
+
+[[package]]
+name = "match_option"
+version = "0.1.0"
+
+[[package]]
+name = "match_other"
+version = "0.1.0"
+
+[[package]]
+name = "minigrep"
+version = "0.1.0"
+
+[[package]]
+name = "minigrep_iter"
 version = "0.1.0"
 
 [[package]]
@@ -67,7 +187,67 @@ name = "ownership_var"
 version = "0.1.0"
 
 [[package]]
+name = "pointer_box"
+version = "0.1.0"
+
+[[package]]
+name = "pointer_cons"
+version = "0.1.0"
+
+[[package]]
+name = "pointer_cons_rc"
+version = "0.1.0"
+
+[[package]]
+name = "pointer_cons_refcell"
+version = "0.1.0"
+
+[[package]]
+name = "pointer_cycles"
+version = "0.1.0"
+
+[[package]]
+name = "pointer_deref"
+version = "0.1.0"
+
+[[package]]
+name = "pointer_deref_operator"
+version = "0.1.0"
+
+[[package]]
+name = "pointer_drop"
+version = "0.1.0"
+
+[[package]]
+name = "pointer_limit"
+version = "0.1.0"
+
+[[package]]
+name = "pointer_my_box"
+version = "0.1.0"
+
+[[package]]
+name = "pointer_node"
+version = "0.1.0"
+
+[[package]]
+name = "pointer_refcell"
+version = "0.1.0"
+
+[[package]]
+name = "rectangles"
+version = "0.1.0"
+
+[[package]]
+name = "restaurant"
+version = "0.1.0"
+
+[[package]]
 name = "shadowing"
+version = "0.1.0"
+
+[[package]]
+name = "struce_empty"
 version = "0.1.0"
 
 [[package]]
@@ -76,6 +256,26 @@ version = "0.1.0"
 
 [[package]]
 name = "struct_update"
+version = "0.1.0"
+
+[[package]]
+name = "test_add"
+version = "0.1.0"
+
+[[package]]
+name = "test_integration"
+version = "0.1.0"
+
+[[package]]
+name = "test_rectangle"
+version = "0.1.0"
+
+[[package]]
+name = "trait_pair"
+version = "0.1.0"
+
+[[package]]
+name = "trait_summary"
 version = "0.1.0"
 
 [[package]]

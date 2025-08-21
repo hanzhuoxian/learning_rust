@@ -1,0 +1,19 @@
+use std::{env, process};
+use minigrep::Config;
+use minigrep;
+
+fn main(){
+    let args: Vec<String> = env::args().collect();
+    let config = Config::new(&args).unwrap_or_else(|err| {
+        eprintln!("problem parsing arguments {}", err);
+        process::exit(1);
+    });
+
+    println!("search {} in {}", config.query, config.file_path);
+
+    if let Err(e) = minigrep::run(config) {
+        eprintln!("Application error {}", e);
+        process::exit(1);
+    }
+
+}

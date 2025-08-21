@@ -13,8 +13,18 @@
   - [控制流](./control_flow.md)
   - [所有权](./onwership.md)
   - [结构体](./struct.md)
+  - [方法](./method.md)
   - [枚举](./enum.md)
   - [集合](./collections.md)
+  - [包管理](./package.md)
+  - [错误处理](./error.md)
+  - [泛型](./generics.md)
+  - [Trait](./trait.md)
+  - [生命周期](./lifetime.md)
+  - [测试](./test.md)
+  - [闭包与迭代器](./functional.md)
+  - [智能指针](./smart_pointer.md)
+  - [并发](./concurrent.md)
 
 ---
 

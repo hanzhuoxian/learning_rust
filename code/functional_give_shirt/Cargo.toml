@@ -1,0 +1,6 @@
+[package]
+name = "functional_give_shirt"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
