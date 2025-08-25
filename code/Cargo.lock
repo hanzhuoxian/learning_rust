@@ -31,6 +31,34 @@ name = "collection_vector"
 version = "0.1.0"
 
 [[package]]
+name = "concurrent_channel"
+version = "0.1.0"
+
+[[package]]
+name = "concurrent_more_producer"
+version = "0.1.0"
+
+[[package]]
+name = "concurrent_more_tx"
+version = "0.1.0"
+
+[[package]]
+name = "concurrent_move"
+version = "0.1.0"
+
+[[package]]
+name = "concurrent_mutex"
+version = "0.1.0"
+
+[[package]]
+name = "concurrent_mutex_thead"
+version = "0.1.0"
+
+[[package]]
+name = "concurrent_thread"
+version = "0.1.0"
+
+[[package]]
 name = "control_if"
 version = "0.1.0"
 
@@ -160,6 +188,10 @@ version = "0.1.0"
 
 [[package]]
 name = "minigrep_iter"
+version = "0.1.0"
+
+[[package]]
+name = "object_averaged_collection"
 version = "0.1.0"
 
 [[package]]

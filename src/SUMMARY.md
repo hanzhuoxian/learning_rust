@@ -25,6 +25,8 @@
   - [闭包与迭代器](./functional.md)
   - [智能指针](./smart_pointer.md)
   - [并发](./concurrent.md)
+  - [面向对象](./object.md)
+  - [模式匹配](./patterns.md)
 
 ---
 
