@@ -219,6 +219,30 @@ name = "ownership_var"
 version = "0.1.0"
 
 [[package]]
+name = "pattern_fn"
+version = "0.1.0"
+
+[[package]]
+name = "pattern_for"
+version = "0.1.0"
+
+[[package]]
+name = "pattern_if_let"
+version = "0.1.0"
+
+[[package]]
+name = "pattern_let"
+version = "0.1.0"
+
+[[package]]
+name = "pattern_let_some"
+version = "0.1.0"
+
+[[package]]
+name = "pattern_while_let"
+version = "0.1.0"
+
+[[package]]
 name = "pointer_box"
 version = "0.1.0"
 
@@ -272,6 +296,10 @@ version = "0.1.0"
 
 [[package]]
 name = "restaurant"
+version = "0.1.0"
+
+[[package]]
+name = "server_hello"
 version = "0.1.0"
 
 [[package]]
