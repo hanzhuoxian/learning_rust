@@ -66,3 +66,117 @@ Refutability （可反驳性）模式是否会匹配失效。
 对某些可能的值进行匹配会失败的模式被称为是 "可反驳的（refutable）"。
 
 函数参数 、 let、 for 只能接受不可反驳模式，if let 、while let 可以接受可反驳和不可反驳的。
+
+## 模式语法
+
+### 匹配字面值
+
+```rust
+fn main() {
+    let x = 7;
+    match x {
+        1 => println!("one"),               // 普通字面值
+        2 | 3 => println!("two or three"),  // 多个模式
+        4..=5 => println!("4-5"),           // 范围范围-右闭区间
+        6..7 => println!("6"),              // 匹配范围-右开区间
+        other => println!("other {other}"), // 匹配剩余并绑定变量
+        _ => println!("other"),             // 匹配剩余不绑定变量
+    }
+}
+```
+
+### 匹配命名变量
+
+```rust
+fn main() {
+    let x = Some(5);
+    let y = 10;
+    match x {
+        Some(50) => println!("Got 50"),
+        Some(y) => println!("y = {y}"),
+        _ => println!("default case x={:?}", x),
+    }
+
+    println!("main y={}", y);
+}
+```
+
+### 解构结构体
+
+```rust
+struct Point {
+    x: u32,
+    y: u32,
+}
+fn main() {
+    let point = Point { x: 1, y: 2 };
+    let Point { x: a, y: b } = point;
+    println!("a = {} b = {}", a, b);
+}
+
+```
+
+### 解构枚举
+
+```rust
+use std::arch::x86_64;
+
+enum Message {
+    Quit,
+    Move { x: i32, y: i32 },
+    Write(String),
+    ChangeColor(i32, i32, i32),
+}
+fn main() {
+    let message = Message::ChangeColor(0, 160, 255);
+    match message {
+        Message::Quit => println!("Quit"),
+        Message::Move { x, y } => println!("Move: {x}{y}"),
+        Message::Write(s) => println!("Write: {s}"),
+        Message::ChangeColor(r, g, b) => println!("ChangeColor {r} {g} {b}")
+    }
+}
+```
+
+### 解构结构体和枚举嵌套
+
+### 匹配守卫
+
+```rust
+fn main() {
+    // let num = Some(6);
+    let num = None::<i32>;
+    match num {
+        Some(x) if x < 5 => println!("less than five: {x}"),
+        Some(x) => println!("{x}"),
+        None => (),
+    }
+}
+
+```
+
+### @绑定
+
+```rust
+fn main() {
+    enum Message {
+        Hello { id: i32 },
+    }
+
+    let message = Message::Hello{id: 12};
+    match message {
+        Message::Hello { 
+            id: id_var @3..7,
+         } => {
+            println!("id_var: {}", id_var);
+        },
+        Message::Hello { id: 10..=12 } => {
+            println!("10~12");
+        }
+        Message::Hello { id } => {
+            println!("id {}", id)
+        }
+    }
+
+}
+```

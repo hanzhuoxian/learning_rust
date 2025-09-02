@@ -27,6 +27,7 @@
   - [并发](./concurrent.md)
   - [面向对象](./object.md)
   - [模式匹配](./patterns.md)
+  - [宏](./macro.md)
 
 ---
 

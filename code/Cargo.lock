@@ -171,6 +171,29 @@ name = "loops"
 version = "0.1.0"
 
 [[package]]
+name = "macro_attr"
+version = "0.1.0"
+
+[[package]]
+name = "macro_hello"
+version = "0.1.0"
+dependencies = [
+ "macro_hello_derive",
+]
+
+[[package]]
+name = "macro_hello_derive"
+version = "0.1.0"
+dependencies = [
+ "quote",
+ "syn",
+]
+
+[[package]]
+name = "macro_vec"
+version = "0.1.0"
+
+[[package]]
 name = "match_coin"
 version = "0.1.0"
 
@@ -219,6 +242,26 @@ name = "ownership_var"
 version = "0.1.0"
 
 [[package]]
+name = "pattern_at"
+version = "0.1.0"
+
+[[package]]
+name = "pattern_const"
+version = "0.1.0"
+
+[[package]]
+name = "pattern_enum"
+version = "0.1.0"
+
+[[package]]
+name = "pattern_enum_struct"
+version = "0.1.0"
+
+[[package]]
+name = "pattern_enum_tuple"
+version = "0.1.0"
+
+[[package]]
 name = "pattern_fn"
 version = "0.1.0"
 
@@ -227,7 +270,15 @@ name = "pattern_for"
 version = "0.1.0"
 
 [[package]]
+name = "pattern_if"
+version = "0.1.0"
+
+[[package]]
 name = "pattern_if_let"
+version = "0.1.0"
+
+[[package]]
+name = "pattern_ignore"
 version = "0.1.0"
 
 [[package]]
@@ -236,6 +287,14 @@ version = "0.1.0"
 
 [[package]]
 name = "pattern_let_some"
+version = "0.1.0"
+
+[[package]]
+name = "pattern_struct"
+version = "0.1.0"
+
+[[package]]
+name = "pattern_var"
 version = "0.1.0"
 
 [[package]]
@@ -291,6 +350,24 @@ name = "pointer_refcell"
 version = "0.1.0"
 
 [[package]]
+name = "proc-macro2"
+version = "1.0.101"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "89ae43fd86e4158d6db51ad8e2b80f313af9cc74f5c0e03ccb87de09998732de"
+dependencies = [
+ "unicode-ident",
+]
+
+[[package]]
+name = "quote"
+version = "1.0.40"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1885c039570dc00dcb4ff087a89e185fd56bae234ddc7f056a945bf36467248d"
+dependencies = [
+ "proc-macro2",
+]
+
+[[package]]
 name = "rectangles"
 version = "0.1.0"
 
@@ -319,6 +396,17 @@ name = "struct_update"
 version = "0.1.0"
 
 [[package]]
+name = "syn"
+version = "2.0.106"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ede7c438028d4436d71104916910f5bb611972c5cfd7f89b8300a8186e6fada6"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "unicode-ident",
+]
+
+[[package]]
 name = "test_add"
 version = "0.1.0"
 
@@ -341,6 +429,12 @@ version = "0.1.0"
 [[package]]
 name = "tuple"
 version = "0.1.0"
+
+[[package]]
+name = "unicode-ident"
+version = "1.0.18"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5a5f39404a5da50712a4c1eecf25e90dd62b613502b7e925fd4e4d19b5c96512"
 
 [[package]]
 name = "var"
