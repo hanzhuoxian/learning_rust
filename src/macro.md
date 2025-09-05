@@ -25,10 +25,30 @@ macro_rules! my_vec { // macro_rules! 定义宏 vec 宏名称
 他们接受一个代码作为输入，在这些代码上进行操作，然后产生另一些代码作为输出。而非像声明宏那样匹配对应模式然后以另一部分代码替换当前代码。
 
 有三种类型的过程宏：
-自定义派生（derive）
-类属性
-类函数
+自定义派生（derive）宏
 
 ```rust
 
+```
+
+类属性宏
+
+可以创建新的属性。
+
+```rust
+#[route(GET, '/index')]
+fn index() {}
+
+#[proc_macro_attribute]
+pub fn route(attr: TokenStream, item: TokenStream) -> TokenStream {}
+```
+
+类函数(Function-Like)宏
+看起来像函数调用的宏
+
+```rust
+let sql = sql!(SELECT * FROM posts WHERE id=1);
+
+#[proc_macro]
+pub fn sql(input: TokenStream) -> TokenStream {}
 ```

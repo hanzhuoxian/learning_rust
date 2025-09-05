@@ -27,6 +27,10 @@
   - [并发](./concurrent.md)
   - [面向对象](./object.md)
   - [模式匹配](./patterns.md)
+  - [不安全的 Rust](./unsafe.md)
+  - [高级 trait](./advanced_trait.md)
+  - [高级类型](./advanced_type.md)
+  - [高级函数与闭包](./advanced_fn.md)
   - [宏](./macro.md)
 
 ---
