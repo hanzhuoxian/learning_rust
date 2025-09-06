@@ -20,3 +20,67 @@ Item 是一个占位符类型，同时 next 方法定义表明它返回 Option<S
 trait 的例子来检视其中的区别。这哥是现在宏指定了 Item 的类型为 u32:
 
 ## 默认泛型类型参数和运算符重载
+
+`<Rhs = Self>` 这个语法叫做默认类型参数（default type parameters）。Rhs 是一个泛型类型参数（“right hand side”）的缩写。
+它用于定义 add 方法中的 rhs 参数。如果实现 Add trait 时不指定 Rhs 的具体类型， Rhs 的类型将时默认的 Self 类型。也就是在骑上实现的 Add 类型。
+
+扩展类型而不破坏现有代码。
+在大部分用户都不需要的特定情况下进行自定义。
+
+```rust
+pub trait Add<Rhs = Self> {
+    type Output;
+    fn add(self, rhs: Rhs) -> Self::Output;
+}
+```
+
+## 完全限定语法与消歧义：调用相同名称的方法
+
+### 完全限定语法
+
+```rust
+trait Animal {
+    fn baby_name() -> String;
+}
+
+struct Dog;
+
+impl Dog {
+    fn baby_name() -> String {
+        String::from("Spot")
+    }
+}
+
+impl Animal for Dog {
+    fn baby_name() -> String {
+        String::from("puppy")
+    }
+}
+
+fn main() {
+    println!("A baby dog is called a {}", Dog::baby_name());
+    println!("A baby dog is called a {}", <Dog as Animal>::baby_name());
+}
+
+```
+
+## newtype 模式 用以在外部类型上实现外部trait
+
+## 类型别名用来创建类型同义词
+
+类型别名不是一新的单独的类型，完全被当作相同的类型对待。
+
+```rust
+fn main() {
+    type Kilometers = i32;
+    let x: i32 = 5;
+    let y: Kilometers = 5;
+    println!("x + y = {}", x + y);
+}
+
+```
+
+## 动态大小类型和 Size trait
+
+有时被称为 `DST` 或 `unsized types` ，这些类型允许我们处理只有在运行时才知道大小的类型。
+为了处理 DST ，Rust 提供了 Sized trait 来决定一个类型的是否在编译时可知。这个 trait 自动为编译器在编译时就知道大小的类型实现。 Rust 

@@ -3,7 +3,47 @@
 version = 4
 
 [[package]]
+name = "advanced_fn"
+version = "0.1.0"
+
+[[package]]
+name = "advanced_fn_closure"
+version = "0.1.0"
+
+[[package]]
+name = "advanced_trait_animal"
+version = "0.1.0"
+
+[[package]]
 name = "advanced_trait_counter"
+version = "0.1.0"
+
+[[package]]
+name = "advanced_trait_fly"
+version = "0.1.0"
+
+[[package]]
+name = "advanced_trait_meter"
+version = "0.1.0"
+
+[[package]]
+name = "advanced_trait_never_type"
+version = "0.1.0"
+
+[[package]]
+name = "advanced_trait_newtype"
+version = "0.1.0"
+
+[[package]]
+name = "advanced_trait_ops"
+version = "0.1.0"
+
+[[package]]
+name = "advanced_trait_outline"
+version = "0.1.0"
+
+[[package]]
+name = "advanced_trait_type"
 version = "0.1.0"
 
 [[package]]
