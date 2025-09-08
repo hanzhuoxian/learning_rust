@@ -33,6 +33,9 @@
   - [高级函数与闭包](./advanced_fn.md)
   - [宏](./macro.md)
 
+# Rust 名库学习
+- [serde](./serde.md)
+
 ---
 
 # 附录
