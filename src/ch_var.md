@@ -10,27 +10,27 @@
 
 ## 可变与不可变
 
-Rust 声明的变量默认是不可变的。
+Rust 声明的变量默认是不可变的。只能读取不能进行赋值。
 
 代码 1: 不可变变量
 
 ```rust
 fn main() {
-    let x: i32 = 10;
-    println!("{}", x);// 10
-    x = 20; // 编译错误
+    let x: i32 = 10; // 声明不可变变量
+    println!("{}", x); // 10
+    // x = 20; // 为不可变变量赋值-编译错误
 }
 ```
 
-可变变量需要使用 `let mut` 声明
+可变变量需要使用 `let mut` 声明，可变变量即可以读取也可以赋值。
 
 代码 2: 可变变量
 
 ```rust
 fn main() {
-    let mut x: i32 = 10;
+    let mut x: i32 = 10; // 可变变量
     println!("{}", x); // 10
-    x = 20;
+    x = 20; // 为可变变量赋值
     println!("{}", x); // 20
 }
 ```
@@ -47,15 +47,17 @@ fn main() {
     let x = x + 1;
     {
         let x = x + 2;
-        println!("The value of x in inner scope is : {}", x);// 8
+        println!("The value of x in inner scope is : {}", x); // 8
     }
-    println!("The value of x : {}", x);// 6
+    println!("The value of x : {}", x); // 6
 }
 ```
 
 ## 常量
 
 常量是绑定到一个名称的不允许改变的值，声明常量使用 `const`，并且必须注明值类型。常量总是不可变的。常量只能被设置为常量表达式。
+
+常量命名规范：大写字母加下划线
 
 代码 4: 常量
 
