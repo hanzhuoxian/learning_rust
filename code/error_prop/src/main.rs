@@ -7,7 +7,7 @@ fn main() {
     match read_username_from_file() {
         Ok(username) => {
             println!("{}", username)
-        },
+        }
         Err(e) => {
             println!("{e:?}");
         }

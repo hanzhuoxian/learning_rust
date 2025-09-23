@@ -17,7 +17,6 @@ impl Add for Point {
     }
 }
 
-
 fn main() {
     let p1 = Point { x: 1, y: 2 };
     let p2 = Point { x: 3, y: 4 };

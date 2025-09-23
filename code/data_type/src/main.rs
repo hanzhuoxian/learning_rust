@@ -18,7 +18,6 @@ fn main() {
     let x_usize: usize = 255;
     println!("xisize: {}, xusize: {}", x_isize, x_usize);
 
-
     let x_decimal = 98_222;
     println!("x_decimal: {}", x_decimal);
     let x_hex = 0xff;
@@ -27,12 +26,11 @@ fn main() {
     println!("x_octal: {}", x_octal);
     let x_binary = 0b1111_0000;
     println!("x_binary: {}", x_binary);
-    let x_byte  = b'A';
+    let x_byte = b'A';
     println!("x_byte: {}", x_byte);
-
 
     let f = 2.0;
     println!("f {}", f);
-    let f:f32 = 3.0;
+    let f: f32 = 3.0;
     println!("f {}", f);
 }

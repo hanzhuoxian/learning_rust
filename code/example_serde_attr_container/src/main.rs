@@ -4,7 +4,7 @@ use serde::{Deserialize, Serialize};
 struct Point {
     #[serde(rename = "XCoordinate")]
     x: i32,
-    #[serde(rename(serialize="YCoordinate", deserialize = "YCoordinate"))]
+    #[serde(rename(serialize = "YCoordinate", deserialize = "YCoordinate"))]
     y: i32,
 }
 

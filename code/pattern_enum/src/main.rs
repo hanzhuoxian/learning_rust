@@ -12,6 +12,6 @@ fn main() {
         Message::Quit => println!("Quit"),
         Message::Move { x, y } => println!("Move: {x}{y}"),
         Message::Write(s) => println!("Write: {s}"),
-        Message::ChangeColor(r, g, b) => println!("ChangeColor {r} {g} {b}")
+        Message::ChangeColor(r, g, b) => println!("ChangeColor {r} {g} {b}"),
     }
 }

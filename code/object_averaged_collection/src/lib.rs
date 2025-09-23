@@ -11,17 +11,17 @@ impl AveragedCollection {
         self.update_average();
     }
 
-    pub fn remove (&mut self) -> Option<i32>{
+    pub fn remove(&mut self) -> Option<i32> {
         let result = self.list.pop();
         match result {
             Some(value) => {
                 self.update_average();
                 Some(value)
-            },
-            None => None
+            }
+            None => None,
         }
     }
-    
+
     pub fn average(&self) -> f64 {
         self.average
     }

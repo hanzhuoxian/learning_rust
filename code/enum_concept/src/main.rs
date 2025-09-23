@@ -12,6 +12,6 @@ fn main() {
     println!("{:?} {:?}", home_v4, home_v6);
 
     let std_v4 = IpAddr::V4(Ipv4Addr::new(127, 0, 0, 1));
-    let std_v6 = IpAddr::V6(Ipv6Addr::new(0,0,0,0,0,0,0,1));
+    let std_v6 = IpAddr::V6(Ipv6Addr::new(0, 0, 0, 0, 0, 0, 0, 1));
     println!("{:?} {:?}", std_v4, std_v6);
 }

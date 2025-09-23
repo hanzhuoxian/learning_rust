@@ -38,7 +38,11 @@ fn main() {
     println!("a rc count after changing a = {}", Rc::strong_count(&a));
 
     let _c = Rc::downgrade(&a);
-    println!("a rc count after changing weak_count = {}, strong_count = {}", Rc::weak_count(&a), Rc::strong_count(&a));
+    println!(
+        "a rc count after changing weak_count = {}, strong_count = {}",
+        Rc::weak_count(&a),
+        Rc::strong_count(&a)
+    );
 
     // println!("a next item = {:?}", a.tail());
 }

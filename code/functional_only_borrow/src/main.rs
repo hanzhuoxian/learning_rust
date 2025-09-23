@@ -14,18 +14,19 @@ fn main() {
 
     println!("---------------------");
 
-    let mut list = vec![1,2,3];
+    let mut list = vec![1, 2, 3];
     println!("After call closure {list:?}");
     let mut mut_borrows = || list.push(7);
     mut_borrows();
     println!("After call closure {list:?}");
 
-    let mut list = vec![1,2,3];
+    let mut list = vec![1, 2, 3];
 
     println!("Before defining closure {list:?} thread");
-    thread::spawn(move ||{
+    thread::spawn(move || {
         list.push(7);
         println!("thread {list:?}");
-    }).join().unwrap();
-
+    })
+    .join()
+    .unwrap();
 }

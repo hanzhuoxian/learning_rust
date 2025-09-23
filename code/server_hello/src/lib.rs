@@ -8,7 +8,7 @@ pub struct ThreadPoll {
     sender: Option<mpsc::Sender<Job>>,
 }
 
-impl Drop for  ThreadPoll {
+impl Drop for ThreadPoll {
     fn drop(&mut self) {
         for worker in &mut self.workers {
             drop(self.sender.take());

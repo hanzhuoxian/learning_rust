@@ -27,6 +27,6 @@ fn main() {
 
     let mut m = HashMap::new();
     m.entry(field_name).or_insert("Yellow".to_string());
-   
+
     println!("{m:?}");
 }

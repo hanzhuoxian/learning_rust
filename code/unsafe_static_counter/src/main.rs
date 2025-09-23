@@ -5,7 +5,6 @@ fn add_to_count(inc: i32) {
     }
 }
 
-
 fn main() {
     add_to_count(3);
     unsafe {

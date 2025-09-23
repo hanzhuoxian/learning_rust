@@ -6,9 +6,9 @@ struct Rectangle {
 
 impl Rectangle {
     fn square(size: u32) -> Rectangle {
-        Self{
-            width:size,
-            height:size,
+        Self {
+            width: size,
+            height: size,
         }
     }
 }

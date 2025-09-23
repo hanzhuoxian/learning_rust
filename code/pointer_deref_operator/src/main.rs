@@ -10,5 +10,5 @@ fn main() {
 
     x = 2;
     assert_eq!(2, x);
-    assert_eq!(5, *z); 
+    assert_eq!(5, *z);
 }

@@ -8,7 +8,8 @@ fn main() {
         _ => (),
     }
 
-    if let Some(s) = x { // 是 match 的语法糖
+    if let Some(s) = x {
+        // 是 match 的语法糖
         println!("{}", s);
     }
 }

@@ -8,7 +8,6 @@ pub fn hello_macro_derive(input: TokenStream) -> TokenStream {
     impl_hello_macro(&ast)
 }
 
-
 fn impl_hello_macro(ast: &syn::DeriveInput) -> TokenStream {
     let name = &ast.ident;
     let gen_code = quote! {

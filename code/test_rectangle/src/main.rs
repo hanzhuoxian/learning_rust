@@ -48,14 +48,14 @@ mod tests {
     }
 
     #[test]
-    #[should_panic(expected="div_zero")]
+    #[should_panic(expected = "div_zero")]
     fn div_zero() {
         panic!("div_zero");
     }
 
     #[test]
     fn result() -> Result<(), String> {
-        let i = 3; 
+        let i = 3;
         if i == 3 {
             Ok(())
         } else {

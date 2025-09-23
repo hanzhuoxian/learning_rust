@@ -3,7 +3,7 @@ use std::{sync::mpsc, thread, time::Duration};
 fn main() {
     let (tx, rx) = mpsc::channel();
 
-    thread::spawn(move ||{
+    thread::spawn(move || {
         let vals = vec![
             String::from("hi"),
             String::from("from"),

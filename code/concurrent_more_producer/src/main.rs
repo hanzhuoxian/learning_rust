@@ -4,7 +4,7 @@ fn main() {
     let (tx, rx) = mpsc::channel();
     let tx1 = tx.clone();
 
-    thread::spawn(move ||{
+    thread::spawn(move || {
         let vals = vec![
             String::from("hi"),
             String::from("from"),
@@ -18,8 +18,7 @@ fn main() {
         }
     });
 
-
-      thread::spawn(move ||{
+    thread::spawn(move || {
         let vals = vec![
             String::from("more"),
             String::from("message"),

@@ -1,4 +1,4 @@
-use std::{vec};
+use std::vec;
 
 fn main() {
     let v1 = vec![1, 2, 3];

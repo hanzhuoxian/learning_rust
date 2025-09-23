@@ -16,7 +16,6 @@ impl Deref for Wrapper {
     }
 }
 
-
 fn main() {
     let wrapped = Wrapper(vec![String::from("Hello"), String::from("world")]);
     println!("{}", wrapped);

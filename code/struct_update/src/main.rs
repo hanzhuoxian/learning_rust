@@ -15,7 +15,7 @@ fn main() {
         username: String::from("lili"),
         ..user1 // 必须放在最后
     };
-    
+
     println!("user2.active: {}", user2.active);
     println!("user2.username : {}", user2.username);
     println!("user2.email : {}", user2.email);

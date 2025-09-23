@@ -8,5 +8,4 @@ fn main() {
 
     println!("{} {} {}", black.0, black.1, black.2);
     println!("{} {} {}", point.0, point.1, point.2);
-
 }

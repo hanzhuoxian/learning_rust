@@ -29,4 +29,3 @@ fn main() {
     let point = Point { x: 5, y: 10 };
     point.outline_print();
 }
-

@@ -1,8 +1,8 @@
-use std::{env, process};
-use minigrep::Config;
 use minigrep;
+use minigrep::Config;
+use std::{env, process};
 
-fn main(){
+fn main() {
     let args: Vec<String> = env::args().collect();
     let config = Config::new(&args).unwrap_or_else(|err| {
         eprintln!("problem parsing arguments {}", err);
@@ -15,5 +15,4 @@ fn main(){
         eprintln!("Application error {}", e);
         process::exit(1);
     }
-
 }

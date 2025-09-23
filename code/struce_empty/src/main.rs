@@ -3,7 +3,7 @@ struct SayHello;
 trait Hello {
     fn hello();
 }
-impl Hello for SayHello{
+impl Hello for SayHello {
     fn hello() {
         println!("hello");
     }

@@ -27,7 +27,6 @@ fn main() {
     hello(&m);
 }
 
-
 fn hello(name: &str) {
     println!("hello {}!", name)
 }

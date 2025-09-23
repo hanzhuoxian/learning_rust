@@ -5,5 +5,5 @@ mod common;
 #[test]
 fn adder() {
     common::setup();
-    add(1,3);
+    add(1, 3);
 }

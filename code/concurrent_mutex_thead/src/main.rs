@@ -1,4 +1,7 @@
-use std::{sync::{Arc, Mutex}, thread};
+use std::{
+    sync::{Arc, Mutex},
+    thread,
+};
 
 fn main() {
     let counter = Arc::new(Mutex::new(0));

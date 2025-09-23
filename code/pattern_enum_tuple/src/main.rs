@@ -7,5 +7,5 @@ fn main() {
 
     println!("feet {}", feet);
     println!("inches {}", inches);
-    println!("Point x is {} y is {}", x,y);
+    println!("Point x is {} y is {}", x, y);
 }
