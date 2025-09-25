@@ -28,5 +28,5 @@ fn main() {
 
     let origin = Point { x: 0, y: 0, z: 0 };
     let Point { x, .. } = origin; // 用 .. 忽略剩余值
-    println!("x: {}", x);
+    println!("x: {} y: {} z: {}", x, origin.y, origin.z);
 }

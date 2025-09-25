@@ -9,6 +9,7 @@ fn main() {
     let xu32: u32 = 255;
     println!("xi32: {}, xu32: {}", xi32, xu32);
     let xi64 = 127i64;
+    #[allow(clippy::inconsistent_digit_grouping)]
     let xu64: u64 = 25_5;
     println!("xi64: {}, xu64: {}", xi64, xu64);
     let xi128 = 127i128;

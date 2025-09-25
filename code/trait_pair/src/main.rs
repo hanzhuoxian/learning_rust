@@ -9,7 +9,7 @@ struct Own {}
 // 为所有 Pair 结构体实现 new 方法
 impl<T> Pair<T> {
     fn new(x: T, y: T) -> Self {
-        Self { x: x, y: y }
+        Self { x, y }
     }
 }
 
@@ -30,6 +30,8 @@ fn main() {
 
     let o_x = Own {};
     let o_y = Own {};
+
+    #[allow(unused_variables)]
     let pair = Pair::new(o_x, o_y);
     // pair.cmp_display();// 不能调用该方法
 }

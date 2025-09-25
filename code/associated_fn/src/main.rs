@@ -13,5 +13,6 @@ impl Rectangle {
     }
 }
 fn main() {
-    println!("square is {:#?}", Rectangle::square(2));
+    let rect = Rectangle::square(2);
+    println!("square x: {} y: {} is {:#?}", rect.width, rect.height, rect);
 }

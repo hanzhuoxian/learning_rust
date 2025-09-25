@@ -7,20 +7,21 @@ pub mod front_of_house {
             println!("sit down!")
         }
     }
-    mod serving {
-        fn take_order() {}
+    pub mod serving {
+        pub fn take_order() {}
 
-        fn server_order() {}
+        pub fn server_order() {}
 
-        fn take_payment() {}
+        pub fn take_payment() {}
     }
 }
 
 fn deliver_order() {}
+
 mod back_of_house {
-    fn fix_incorrect_order() {
+    pub fn fix_incorrect_order() {
         cook_order();
-        super::deliver_order(); // super 开头从父模块开始调用 
+        super::deliver_order(); // super 开头从父模块开始调用
     }
 
     fn cook_order() {}
@@ -28,7 +29,8 @@ mod back_of_house {
     // 结构体成员需要单独表示是否公开
     pub struct Breakfast {
         pub toast: String,
-        seasonal_fruit: String,
+        #[allow(dead_code)]
+        pub seasonal_fruit: String,
     }
 
     impl Breakfast {
@@ -56,12 +58,18 @@ pub fn eat_at_restaurant() {
     // 成员未公开，不能访问
     // println!("I'd like {} fruit", meat.seasonal_fruit);
 
-    let order1 = back_of_house::Appetizer::Soup;
-    let order2 = back_of_house::Appetizer::Salad;
+    let _order1 = back_of_house::Appetizer::Soup;
+    let _order2 = back_of_house::Appetizer::Salad;
     // 绝对路径
     crate::front_of_house::hosting::add_to_wait_list();
     // 相对路径
     front_of_house::hosting::add_to_wait_list();
+
+    back_of_house::fix_incorrect_order();
     // 使用 use 创建别名
     seat_at_table();
+
+    front_of_house::serving::take_order();
+    front_of_house::serving::server_order();
+    front_of_house::serving::take_payment();
 }

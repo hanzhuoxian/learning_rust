@@ -24,9 +24,9 @@ impl Config {
         let ignore_case = env::var("IGNORE_CASE").is_ok();
 
         Ok(Self {
-            query: query,
-            file_path: file_path,
-            ignore_case: ignore_case,
+            query,
+            file_path,
+            ignore_case,
         })
     }
 }
@@ -34,12 +34,11 @@ impl Config {
 pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let contents = fs::read_to_string(config.file_path)?;
     println!("With text \n{}", contents);
-    let result: Vec<&str>;
-    if config.ignore_case {
-        result = search_case_insensitive(&config.query, &contents);
+    let result = if config.ignore_case {
+        search_case_insensitive(&config.query, &contents)
     } else {
-        result = search(&config.query, &contents);
-    }
+        search(&config.query, &contents)
+    };
 
     println!("search result {:?}", result);
     Ok(())

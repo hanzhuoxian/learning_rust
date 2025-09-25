@@ -13,7 +13,7 @@ impl<T> Point<T> {
     }
 }
 
-impl<f32> Point<f32> {
+impl Point<f32> {
     fn x(&self) -> &f32 {
         &self.x
     }
@@ -26,6 +26,10 @@ impl<f32> Point<f32> {
 fn main() {
     let p = Point { x: 1, y: 2 };
 
-    println!("{}", p.x());
+    println!("{}", p.xx());
     println!("{}", p.yy());
+
+    let p2 = Point { x: 1.0, y: 2.0 };
+    println!("{}", p2.x());
+    println!("{}", p2.y());
 }

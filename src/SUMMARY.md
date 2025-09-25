@@ -11,7 +11,7 @@
   - [变量](./ch_var.md)
   - [函数](./ch_fn.md)
   - [控制流](./control_flow.md)
-  - [所有权](./onwership.md)
+  - [所有权](./ownership.md)
   - [结构体](./struct.md)
   - [方法](./method.md)
   - [枚举](./enum.md)

@@ -1,9 +1,10 @@
 use std::{
-    cell::{Ref, RefCell},
+    cell::RefCell,
     rc::{Rc, Weak},
 };
 
 #[derive(Debug)]
+#[allow(dead_code)]
 struct Node {
     value: i32,
     children: RefCell<Vec<Rc<Node>>>,

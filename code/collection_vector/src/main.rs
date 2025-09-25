@@ -4,6 +4,7 @@ fn main() {
     // 向列表插入值
     v.push(1);
     // 从列表中取出值
+    #[allow(clippy::single_match)]
     match v.pop() {
         Some(i) => {
             println!("{}", i)
@@ -38,16 +39,21 @@ fn main() {
         println!("{}", i);
     }
 
+    #[derive(Debug)]
     enum SpreadsheetCell {
         Int(i32),
         Float(f64),
         Text(String),
     }
+
     let cells = vec![
         SpreadsheetCell::Int(3),
         SpreadsheetCell::Float(3.4),
         SpreadsheetCell::Text(String::from("rust")),
     ];
 
+    for cell in cells {
+        println!("{:?}", cell)
+    }
     // 丢弃 vec 时的中元素也被丢弃
 }

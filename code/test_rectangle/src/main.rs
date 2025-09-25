@@ -10,7 +10,22 @@ impl Rectangle {
     }
 }
 
+fn main() {
+    let rect = Rectangle {
+        width: 30,
+        height: 50,
+    };
+    println!(
+        "Can hold: {}",
+        rect.can_hold(&Rectangle {
+            width: 20,
+            height: 30
+        })
+    );
+}
+
 #[test]
+#[allow(clippy::assertions_on_constants)]
 fn assert() {
     assert!(true);
 }
@@ -43,8 +58,9 @@ mod tests {
     }
 
     #[test]
+    #[allow(clippy::assertions_on_constants)]
     fn assert_msg() {
-        assert!(true, "I am false {}", "ff");
+        assert!(true);
     }
 
     #[test]
@@ -63,4 +79,3 @@ mod tests {
         }
     }
 }
-fn main() {}

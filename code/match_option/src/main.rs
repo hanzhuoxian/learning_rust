@@ -1,4 +1,5 @@
 fn plus_one(x: Option<i32>) -> Option<i32> {
+    #[allow(clippy::manual_map)]
     match x {
         None => None,
         Some(i) => Some(i + 1),
@@ -10,7 +11,7 @@ fn main() {
     let none = plus_one(None);
 
     println!("{}", six.unwrap());
-    if none == None {
+    if Option::is_none(&none) {
         println!("None");
     }
 }

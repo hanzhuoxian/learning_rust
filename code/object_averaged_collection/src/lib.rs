@@ -1,11 +1,19 @@
-use std::result;
-
-struct AveragedCollection {
+pub struct AveragedCollection {
     list: Vec<i32>,
     average: f64,
 }
-
+impl Default for AveragedCollection {
+    fn default() -> Self {
+        Self::new()
+    }
+}
 impl AveragedCollection {
+    pub fn new() -> AveragedCollection {
+        AveragedCollection {
+            list: vec![],
+            average: 0.0,
+        }
+    }
     pub fn add(&mut self, value: i32) {
         self.list.push(value);
         self.update_average();

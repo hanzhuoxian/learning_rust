@@ -1,10 +1,10 @@
 #[derive(Debug, PartialEq)]
-struct Shoe {
-    size: u32,
-    style: String,
+pub struct Shoe {
+    pub size: u32,
+    pub style: String,
 }
 
-fn shoe_in_size(shoes: Vec<Shoe>, shoe_size: u32) -> Vec<Shoe> {
+pub fn shoe_in_size(shoes: Vec<Shoe>, shoe_size: u32) -> Vec<Shoe> {
     shoes.into_iter().filter(|s| s.size == shoe_size).collect()
 }
 

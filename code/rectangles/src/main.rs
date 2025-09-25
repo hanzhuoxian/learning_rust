@@ -4,7 +4,7 @@ fn rect_var() {
     println!("The area of Rectangles is {}", area(width1, height1));
 }
 fn area(width: u32, height: u32) -> u32 {
-    return width * height;
+    width * height
 }
 
 fn rect_tuple() {
@@ -13,7 +13,7 @@ fn rect_tuple() {
 }
 
 fn area_tuple(rectangles: (u32, u32)) -> u32 {
-    return rectangles.0 * rectangles.1;
+    rectangles.0 * rectangles.1
 }
 
 #[derive(Debug)]
@@ -28,6 +28,7 @@ impl Rectangle {
         self.height * self.width
     }
 
+    #[allow(clippy::needless_arbitrary_self_type)]
     fn area_full(self: &Self) -> u32 {
         self.height * self.width
     }

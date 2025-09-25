@@ -12,8 +12,11 @@ fn main() {
         data: String::from("my stuff"),
     };
 
+    println!("CustomSmartPointer created with data: `{}`", c.data);
+
     let d = CustomSmartPointer {
         data: String::from("other stuff"),
     };
-    println!("CustomSmartPointer created");
+
+    println!("CustomSmartPointer created with data: `{}`", d.data);
 }

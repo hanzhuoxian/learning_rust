@@ -1,7 +1,7 @@
 use std::vec;
 
 fn main() {
-    let v1 = vec![1, 2, 3];
+    let v1 = [1, 2, 3];
 
     let iter_v1 = v1.iter(); // 创建迭代器
     for val in iter_v1 {

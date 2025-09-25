@@ -1,6 +1,7 @@
 fn main() {
     let x = Some(3u8);
 
+    #[allow(clippy::single_match)]
     match x {
         Some(s) => {
             println!("{}", s);

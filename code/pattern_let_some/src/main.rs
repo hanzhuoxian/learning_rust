@@ -5,6 +5,7 @@ fn main() {
         println!("{x}");
     }
 
+    #[allow(irrefutable_let_patterns)]
     if let x = 5 {
         println!("{x}");
     }

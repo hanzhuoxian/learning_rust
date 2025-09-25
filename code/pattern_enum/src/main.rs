@@ -1,5 +1,4 @@
-use std::arch::x86_64;
-
+#[allow(dead_code)]
 enum Message {
     Quit,
     Move { x: i32, y: i32 },

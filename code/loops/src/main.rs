@@ -1,7 +1,7 @@
 fn main() {
     let mut number = 0;
     loop {
-        number = number + 1;
+        number += 1;
         if number == 2 {
             continue; // 跳过本次循环
         }

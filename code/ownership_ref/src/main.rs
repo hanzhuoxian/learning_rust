@@ -20,6 +20,7 @@ fn calculate_length(s: String) -> (String, usize) {
     (s, length)
 }
 
+#[allow(clippy::ptr_arg)]
 fn calculate_length_ref(s: &String) -> usize {
     // s 是 String 的引用
     s.len()

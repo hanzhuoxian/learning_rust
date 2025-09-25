@@ -1,4 +1,3 @@
-use minigrep_iter;
 use minigrep_iter::Config;
 use std::{env, process};
 

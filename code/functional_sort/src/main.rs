@@ -20,9 +20,15 @@ fn main() {
     ];
     list.sort_by_key(|r| r.width);
     println!("sorted {list:?}");
+    list.sort_by_key(|r| r.height);
+    println!("sorted {list:?}");
 
+    #[allow(unused_mut)]
     let mut sort_operations: Vec<String> = vec![];
+
+    #[allow(unused_variables)]
     let value = String::from("closure called");
+
     list.sort_by_key(|r| {
         // sort_operations.push(value); // 会移动所有权，编译报错
         r.width

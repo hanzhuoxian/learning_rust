@@ -1,8 +1,7 @@
 fn main() {
     let hello = String::from("abcd");
-    let result;
     let a = "a".to_string();
-    result = longest(&hello, &a);
+    let result = longest(&hello, &a);
     println!("{}", result);
 }
 

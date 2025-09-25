@@ -13,6 +13,7 @@ mod tests {
     }
 
     #[test]
+    #[should_panic]
     fn another() {
         panic!("Make this test fail");
     }

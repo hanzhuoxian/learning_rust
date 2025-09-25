@@ -35,11 +35,11 @@ fn main() {
     let mut mut_one = One {
         inner: OneOne { v: 2 },
     };
-    print_one_one(&mut mut_one);
+    print_one_one(&mut_one);
 
     update_one_one(&mut mut_one, 3);
 
-    print_one_one(&mut mut_one);
+    print_one_one(&mut_one);
 }
 
 fn print_one_one<T: Display>(one_one: &OneOne<T>) {

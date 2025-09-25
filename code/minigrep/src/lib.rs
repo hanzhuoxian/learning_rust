@@ -16,7 +16,7 @@ impl Config {
         Ok(Self {
             query: args[1].clone(),
             file_path: args[2].clone(),
-            ignore_case: ignore_case,
+            ignore_case,
         })
     }
 }
@@ -24,12 +24,13 @@ impl Config {
 pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let contents = fs::read_to_string(config.file_path)?;
     println!("With text \n{}", contents);
-    let result: Vec<&str>;
-    if config.ignore_case {
-        result = search_case_insensitive(&config.query, &contents);
+
+    #[allow(clippy::let_unit_value)]
+    let result = if config.ignore_case {
+        search_case_insensitive(&config.query, &contents);
     } else {
-        result = search(&config.query, &contents);
-    }
+        search(&config.query, &contents);
+    };
 
     println!("search result {:?}", result);
     Ok(())
